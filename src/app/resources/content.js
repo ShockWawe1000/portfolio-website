@@ -115,7 +115,7 @@ const about = {
                 ],
                 images: [ // optional: leave the array empty if you don't want to display images
                     {
-                        src: '/images/projects/unhcr.jpg',
+                        src: '/images/projects/unhcr.webp',
                         alt: 'Once UI Project',
                         width: 16,
                         height: 9
