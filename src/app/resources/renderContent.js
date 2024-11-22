@@ -7,6 +7,7 @@ const renderContent = (t) => {
         return createI18nContent(t);
     } else {
         return {
+            
             person,
             social,
             newsletter,

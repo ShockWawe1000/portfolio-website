@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, forwardRef } from 'react';
+import React, { useState, useEffect, useRef, forwardRef } from 'react';
 import { SpacingToken } from '../types';
 import styles from './RevealFx.module.scss';
 import { Flex } from '.';
@@ -11,7 +11,6 @@ interface RevealFxProps extends React.HTMLAttributes<HTMLDivElement> {
 	delay?: number;
 	revealedByDefault?: boolean;
 	translateY?: number | SpacingToken;
-	trigger?: boolean;
 	style?: React.CSSProperties;
 	className?: string;
 }
@@ -22,26 +21,38 @@ const RevealFx = forwardRef<HTMLDivElement, RevealFxProps>(({
 	delay = 0,
 	revealedByDefault = false,
 	translateY,
-	trigger,
 	style,
 	className,
 	...rest
 }, ref) => {
 	const [isRevealed, setIsRevealed] = useState(revealedByDefault);
+	const elementRef = useRef<HTMLDivElement | null>(null);
 
-	useEffect(() => {
-		const timer = setTimeout(() => {
+	const handleScroll = () => {
+		if (!elementRef.current) return;
+
+		const rect = elementRef.current.getBoundingClientRect();
+		const windowHeight = window.innerHeight;
+
+		// Trigger reveal when the element is 20% visible in the viewport
+		if (rect.top < windowHeight * 0.8) {
 			setIsRevealed(true);
-		}, delay * 1000);
-
-		return () => clearTimeout(timer);
-	}, [delay]);
+		} else {
+			setIsRevealed(false);
+		}
+	};
 
 	useEffect(() => {
-		if (trigger !== undefined) {
-			setIsRevealed(trigger);
-		}
-	}, [trigger]);
+		if (revealedByDefault) return;
+
+		// Attach scroll event listener
+		window.addEventListener('scroll', handleScroll);
+		handleScroll(); // Trigger on mount to check visibility
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, [revealedByDefault]);
 
 	const getSpeedDuration = () => {
 		switch (speed) {
@@ -79,8 +90,12 @@ const RevealFx = forwardRef<HTMLDivElement, RevealFxProps>(({
 		<Flex
 			fillWidth
 			justifyContent="center"
-			ref={ref}
-			aria-hidden="true"
+			ref={(node) => {
+				elementRef.current = node;
+				if (typeof ref === 'function') ref(node);
+				else if (ref) ref.current = node;
+			}}
+			aria-hidden={!isRevealed}
 			style={revealStyle}
 			className={combinedClassName}
 			{...rest}>
