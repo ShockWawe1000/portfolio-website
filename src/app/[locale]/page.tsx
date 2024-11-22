@@ -81,7 +81,7 @@ export default function Home(
 					<Flex
 						direction="column"
 						fillWidth maxWidth="s" gap="m">
-						<RevealFx
+						<RevealFx speed="medium"
 							translateY="4">
 							<Heading
 								wrap="balance"
@@ -107,9 +107,9 @@ export default function Home(
 									data-border="rounded"
 									href={`/${locale}/about`}
 									variant="tertiary"
-									size="m">
+									size="l">
 									<Flex
-										gap="8"
+										gap="12"
 										alignItems="center">
 										{about.avatar.display && (
 											<Avatar
