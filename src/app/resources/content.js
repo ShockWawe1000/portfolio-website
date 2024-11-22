@@ -261,12 +261,66 @@ const gallery = {
     label: 'Gallery',
     title: 'My photo gallery',
     description: `A photo collection by ${person.name}`,
-    // Images from https://pexels.com
     images: [
         { 
-            src: '/images/construction.webp', 
+            src: '/images/projects/event-skopje/1.jpg', 
+            alt: 'image',
+            orientation: 'horizontal'
+        },
+        { 
+            src: '/images/projects/event-skopje/2.jpg', 
             alt: 'image',
             orientation: 'vertical'
+        },
+        { 
+            src: '/images/projects/event-skopje/3.jpg', 
+            alt: 'image',
+            orientation: 'horizontal'
+        },
+        { 
+            src: '/images/projects/design.webp', 
+            alt: 'image',
+            orientation: 'horizontal'
+        },
+        { 
+            src: '/images/projects/event-szeged/1.jpg', 
+            alt: 'image',
+            orientation: 'horizontal'
+        },
+        { 
+            src: '/images/projects/event-szeged/2.jpg', 
+            alt: 'image',
+            orientation: 'vertical'
+        },
+        { 
+            src: '/images/projects/event-szeged/3.jpg', 
+            alt: 'image',
+            orientation: 'horizontal'
+        },
+        { 
+            src: '/images/projects/event-szeged/4.jpg', 
+            alt: 'image',
+            orientation: 'horizontal'
+        },
+        { 
+            src: '/images/projects/event-szeged/5.jpg', 
+            alt: 'image',
+            orientation: 'horizontal'
+        },
+        { 
+            src: '/images/projects/event-szeged/6.jpg', 
+            alt: 'image',
+            orientation: 'vertical'
+        },
+        { 
+            src: '/images/projects/event-szeged/7.jpg', 
+            alt: 'image',
+            orientation: 'horizontal'
+        },
+        { 
+            src: '/images/projects/event-szeged/9.jpg', 
+            alt: 'image',
+            orientation: 'horizontal'
         },
     ]
 }
