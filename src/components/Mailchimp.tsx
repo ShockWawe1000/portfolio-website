@@ -1,10 +1,9 @@
 "use client";
 
-import { mailchimp } from '@/app/resources'
-import { Button, Flex, Heading, Input, Text, Background } from '@/once-ui/components';
+import { mailchimp } from '@/app/resources';
+import { Button, Flex, Heading, Text, Background } from '@/once-ui/components'; // Removed Input import
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-
 
 function debounce<T extends (...args: any[]) => void>(func: T, delay: number): T {
     let timeout: ReturnType<typeof setTimeout>;
@@ -18,60 +17,35 @@ type NewsletterProps = {
     display: boolean;
     title: string | JSX.Element;
     description: string | JSX.Element;
-}
+};
 
-export const Mailchimp = (
-    { newsletter }: { newsletter: NewsletterProps}
-) => {
-    const [email, setEmail] = useState<string>('');
-    const [error, setError] = useState<string>('');
+export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
     const [touched, setTouched] = useState<boolean>(false);
-
     const t = useTranslations();
-
-    const validateEmail = (email: string): boolean => {
-        if (email === '') {
-            return true;
-        }
-
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailPattern.test(email);
-    };
-
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const value = e.target.value;
-        setEmail(value);
-
-        if (!validateEmail(value)) {
-            setError('Please enter a valid email address.');
-        } else {
-            setError('');
-        }
-    };
-
-    const debouncedHandleChange = debounce(handleChange, 2000);
-
-    const handleBlur = () => {
-        setTouched(true);
-        if (!validateEmail(email)) {
-            setError('Please enter a valid email address.');
-        }
-    };
 
     return (
         <Flex
-            style={{overflow: 'hidden'}}
+            style={{ overflow: 'hidden' }}
             position="relative"
-            fillWidth padding="xl"  radius="l" marginBottom="m"
-            direction="column" alignItems="center" align="center"
-            background="surface" border="neutral-medium" borderStyle="solid-1">
+            fillWidth
+            padding="xl"
+            radius="l"
+            marginBottom="m"
+            direction="column"
+            alignItems="center"
+            align="center"
+            background="surface"
+            border="neutral-medium"
+            borderStyle="solid-1">
             <Background
                 position="absolute"
                 mask={mailchimp.effects.mask as any}
                 gradient={mailchimp.effects.gradient as any}
                 dots={mailchimp.effects.dots as any}
-                lines={mailchimp.effects.lines as any}/>
-            <Heading style={{position: 'relative'}}
+                lines={mailchimp.effects.lines as any}
+            />
+            <Heading
+                style={{ position: 'relative' }}
                 marginBottom="s"
                 variant="display-strong-xs">
                 {newsletter.title}
@@ -79,7 +53,7 @@ export const Mailchimp = (
             <Text
                 style={{
                     position: 'relative',
-                    maxWidth: 'var(--responsive-width-xs)'
+                    maxWidth: 'var(--responsive-width-xs)',
                 }}
                 wrap="balance"
                 marginBottom="l"
@@ -90,14 +64,20 @@ export const Mailchimp = (
                 style={{
                     width: '100%',
                     display: 'flex',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
                 }}
                 action={mailchimp.action}
                 method="post"
                 id="mc-embedded-subscribe-form"
                 name="mc-embedded-subscribe-form">
-                <Flex id="mc_embed_signup_scroll"
-                    fillWidth maxWidth={24} gap="8">
+                <Flex
+                    id="mc_embed_signup_scroll"
+                    fillWidth
+                    direction="column"
+                    alignItems="center"
+                    gap="8">
+                    {/* Input is commented out */}
+                    {/* 
                     <Input
                         formNoValidate
                         labelAsPlaceholder
@@ -106,39 +86,34 @@ export const Mailchimp = (
                         type="email"
                         label="Email"
                         required
-                        onChange={(e) => {
-                            if (error) {
-                                handleChange(e);
-                            } else {
-                                debouncedHandleChange(e);
-                            }
-                        }}
-                        onBlur={handleBlur}
-                        error={error}/>
-                    <div style={{display: 'none'}}>
-                        <input type="checkbox" readOnly name="group[3492][1]" id="mce-group[3492]-3492-0" value="" checked/>
-                    </div>
-                    <div id="mce-responses" className="clearfalse">
-                        <div className="response" id="mce-error-response" style={{display: 'none'}}></div>
-                        <div className="response" id="mce-success-response" style={{display: 'none'}}></div>
-                    </div>
-                    <div aria-hidden="true" style={{position: 'absolute', left: '-5000px'}}>
-                        <input type="text" readOnly name="b_c1a5a210340eb6c7bff33b2ba_0462d244aa" tabIndex={-1} value=""/>
-                    </div>
-                    <div className="clear">
-                        <Flex
-                            height="48" alignItems="center">
-                            <Button
-                                id="mc-embedded-subscribe"
-                                value="Subscribe"
-                                size="m"
-                                fillWidth>
-                                {t("newsletter.button")}
-                            </Button>
-                        </Flex>
-                    </div>
+                    />
+                    */}
+                    <Flex height="64" alignItems="center">
+                        <Button
+                            id="mc-embedded-subscribe"
+                            value="Subscribe"
+                            size="l" // Enlarged the button
+                            style={{
+                                fontSize: '1.2rem', // Adjusted text size
+                                padding: '0.8rem 1.5rem', // Added padding
+                                textAlign: 'center',
+                                transition: 'all 0.3s ease', // Centered the button text
+                            }}
+                            onMouseEnter={(e) => {
+                                e.target.style.boxShadow = '0 0 30px rgba(86, 236, 173, 0.8)';
+                                e.target.style.color = 'rgba(86, 236, 173, 0.8)';
+                             
+                                 // Glow effect on hover
+                            }}
+                            onMouseLeave={(e) => {
+                                e.target.style.boxShadow = '';
+                                 e.target.style.color = ''; // Remove glow when not hovered
+                            }}>
+                            Contact Me
+                        </Button>
+                    </Flex>
                 </Flex>
             </form>
         </Flex>
-    )
-}
+    );
+};

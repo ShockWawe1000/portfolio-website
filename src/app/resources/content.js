@@ -1,21 +1,23 @@
 import { InlineCode } from "@/once-ui/components";
 
 const person = {
-    firstName: 'Selene',
-    lastName:  'Yu',
+    firstName: 'Edis',
+    lastName:  'Usein',
     get name() {
         return `${this.firstName} ${this.lastName}`;
     },
-    role:      'Design Engineer',
-    avatar:    '/images/avatar.jpg',
-    location:  'Asia/Jakarta',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-    languages: ['English', 'Bahasa']  // optional: Leave the array empty if you don't want to display languages
+    role:      'Software Engineer, Designer and Amateur Filmmaker',
+    avatar:    '/images/edis_bodyshot1.webp',
+    location:  'Europe/Skopje',        // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+    languages: ['English', 'German', 'Japaneese', 'Macedonian' , 'Balkan Languages']  // optional: Leave the array empty if you don't want to display languages
 }
 
 const newsletter = {
     display: true,
-    title: <>Subscribe to {person.firstName}'s Newsletter</>,
-    description: <>I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering.</>
+    title: <>
+    Send me an <span style={{ color: 'rgb(86, 236, 173)'  }}>Email!</span>
+</>,
+    description: <>From job or partnership offerings to talking about movies, <span style={{ color: 'rgb(86, 236, 173)'  }}>im always up for a chat!</span> Send one down here 👇</>
 }
 
 const social = [
@@ -24,12 +26,12 @@ const social = [
     {
         name: 'GitHub',
         icon: 'github',
-        link: 'https://github.com/once-ui-system/nextjs-starter',
+        link: 'https://github.com/ShockWawe1000',
     },
     {
         name: 'LinkedIn',
         icon: 'linkedin',
-        link: 'https://www.linkedin.com/company/once-ui/',
+        link: 'https://www.linkedin.com/in/edis-usein-52a45923a/',
     },
     {
         name: 'X',
@@ -39,7 +41,7 @@ const social = [
     {
         name: 'Email',
         icon: 'email',
-        link: 'mailto:example@gmail.com',
+        link: 'mailto:edis.usein@gmail.com',
     },
 ]
 
@@ -47,8 +49,8 @@ const home = {
     label: 'Home',
     title: `${person.name}'s Portfolio`,
     description: `Portfolio website showcasing my work as a ${person.role}`,
-    headline: <>Design engineer and builder</>,
-    subline: <>I'm Selene, a design engineer at <InlineCode>FLY</InlineCode>, where I craft intuitive<br/> user experiences. After hours, I build my own projects.</>
+    headline: <>Meet Edis Usein</>,
+    subline: <>A Software Engineer student by <InlineCode>Day</InlineCode> ,a freelancer by <InlineCode>Night</InlineCode>, and a movie director  <InlineCode>Inbewteen</InlineCode>.</>
 }
 
 const about = {
@@ -60,48 +62,67 @@ const about = {
         subItems: true
     },
     avatar: {
+        
         display: true
     },
     calendar: {
         display: true,
-        link: 'https://cal.com'
+        link: 'mailto:edis.usein@gmail.com'
     },
     intro: {
         display: true,
         title: 'Introduction',
-        description: <>Selene is a Jakarta-based design engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology.</>
+        description: <>Im a student based in N.Macedonia, with a passion for transforming
+        difficult, tough and complex challenges into simple and elegant solutions. 
+        My work spans from designing and building elegant websites to developing robust programs.</> 
     },
     work: {
         display: true, // set to false to hide this section
         title: 'Work Experience',
         experiences: [
             {
-                company: 'FLY',
-                timeframe: '2022 - Present',
-                role: 'Senior Design Engineer',
+                company: 'Sparkasse',
+                timeframe: '2024 - present',
+                role: 'Banker - Junior',
                 achievements: [
-                    <>Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.</>,
-                    <>Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster.</>
+                    <>Managed the distribution of bank cards and account openings for students, ensuring smooth onboarding.</>,
+                    <>Coordinated the incorporation process for new student clients, providing clear instructions and support.</>,
+                    <>Facilitated the first point of contact for students, creating a welcoming and informative environment.</>,
+                    <>Streamlined account setup and card delivery, contributing to the efficiency of the bank’s student services.</>
+                ],
+                images: [ ]
+            },
+            {
+                company: 'Freelance Dev',
+                timeframe: '2023 - present',
+                role: 'Self Employed',
+                achievements: [
+                    <>Crafted tailored digital strategies to help businesses transition smoothly into the online space, optimizing their operations for the digital age.</>,
+                    <>Developed custom applications that efficiently manage complex data, enabling businesses to handle, organize, and analyze their information seamlessly.</>,
+                    <>Started a buisness model where Businesses were digitised and offered a packaged deal</>
+
+                ],
+                images: [ ]
+            },
+            {
+                company: 'UNHCR',
+                timeframe: '2022 - 2023',
+                role: 'IT Tehnician and Mentor',
+                achievements: [
+                    <>Managed the refurbishment of donated PCs, meticulously diagnosing hardware and software issues to restore functionality and performance. </>,
+                    <>Taught and mentored UN refugees, enabling underprivileged individuals to bridge the digital divide and enhance their opportunities.</>,
+                
                 ],
                 images: [ // optional: leave the array empty if you don't want to display images
                     {
-                        src: '/images/projects/project-01/cover-01.jpg',
+                        src: '/images/projects/unhcr.jpg',
                         alt: 'Once UI Project',
                         width: 16,
                         height: 9
                     }
                 ]
-            },
-            {
-                company: 'Creativ3',
-                timeframe: '2018 - 2022',
-                role: 'Lead Designer',
-                achievements: [
-                    <>Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.</>,
-                    <>Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue.</>
-                ],
-                images: [ ]
             }
+           
         ]
     },
     studies: {
@@ -109,31 +130,85 @@ const about = {
         title: 'Studies',
         institutions: [
             {
-                name: 'University of Jakarta',
+                name: 'University American College Skopje',
                 description: <>Studied software engineering.</>,
             },
             {
-                name: 'Build the Future',
-                description: <>Studied online marketing and personal branding.</>,
+                name: 'Harvard CS50',
+                description: <>Actually learned software engineering.</>,
+            },
+            {
+                name: 'Odin Project',
+                description: <>Learned building websites.</>,
             }
         ]
     },
     technical: {
         display: true, // set to false to hide this section
-        title: 'Technical skills',
+        title: 'Things i can do',
         skills: [
             {
-                title: 'Figma',
-                description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
+                title: 'Websites',
+                description:[<>Can build and deploy a website with unmatched speed 🚀</>,
+
+                    <span>Technologies:</span>,
+                    <span><InlineCode>HTML/CSS</InlineCode>, <InlineCode>JavaScript</InlineCode>, <InlineCode>Next.js</InlineCode>, <InlineCode>Tailwind</InlineCode>, <InlineCode>React</InlineCode></span>,
+                ] ,
+
                 images: [
                     {
-                        src: '/images/projects/project-01/cover-02.jpg',
+                        src: '/images/projects/p3.webp',
                         alt: 'Project image',
                         width: 16,
                         height: 9
                     },
                     {
-                        src: '/images/projects/project-01/cover-03.jpg',
+                        src: '/images/projects/p1.webp',
+                        alt: 'Project image',
+                        width: 16,
+                        height: 9
+                    },
+
+                ]
+            },
+            {
+                title: 'Apps',
+                description: [<>Building next gen apps on .NET, Java even Assembly so long beer is included!</>,
+                <span>Technologies:</span>,<span> <InlineCode>C++</InlineCode>, <InlineCode>Python</InlineCode>,<InlineCode>C#</InlineCode>, <InlineCode>Java</InlineCode>, <InlineCode>SQL</InlineCode>, <InlineCode>.NET</InlineCode></span>],
+                images: [
+                    {
+                        src: '/images/projects/login_win.webp',
+                        alt: 'Project image',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/main_win.webp',
+                        alt: 'Project image',
+                        width: 16,
+                        height: 9
+                    },
+                    
+                ]
+            },
+            {
+                title: 'Designs',
+                description: [<>Designing eye candy, for every eye! 🍬</>, <span>Technologies:</span>,<span> <InlineCode>Adobe Suite - Photoshop, Premiere, After Effects, Ilustrator</InlineCode>, <InlineCode>Figma</InlineCode>. <InlineCode>DaVinci Resolve</InlineCode></span>],
+                images: [
+                    {
+                        src: '/images/projects/d3.webp',
+                        alt: 'Project image',
+                        width: 33,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/d2.webp',
+                        alt: 'Project image',
+                        width: 16,
+                        height: 9
+                    },
+                    {
+                        src: '/images/projects/d1.webp',
                         alt: 'Project image',
                         width: 16,
                         height: 9
@@ -141,17 +216,27 @@ const about = {
                 ]
             },
             {
-                title: 'Next.js',
-                description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
+                title: 'Movies',
+                description: [<>That one pipe dream hobby that everyone has! ✨</> ,
+                <span>Technologies:</span>,<span> <InlineCode>My Dreams</InlineCode></span>],
                 images: [
                     {
-                        src: '/images/projects/project-01/cover-04.jpg',
+                        src: 'https://www.youtube.com/embed/zurU_P2VAAU?si=OwVLXE0gBr0UNjrI',
                         alt: 'Project image',
-                        width: 16,
+                        width: 10,
                         height: 9
                     },
+                    {
+                        src: 'https://www.youtube.com/watch?v=ZUIB4Aig_3c&ab_channel=MDVDMedia',
+                        alt: 'Project image',
+                        width: 9,
+                        height: 9
+                    },
+                  
+
                 ]
             }
+
         ]
     }
 }

@@ -1,9 +1,9 @@
 {
     "person": {
-        "role": "Design Engineer"
+        "role": "Software Developer"
     },
     "newsletter": {
-        "title": "Subscribe to {firstName}'s Newsletter",
+        "title": "Contact Edis Usein",
         "description": "I occasionally write about design, technology, and share thoughts on the intersection of creativity and engineering",
         "button": "Sign up"
     },
@@ -11,8 +11,8 @@
         "label": "Home",
         "title": "{name}'s Portfolio",
         "description": "Portfolio website showcasing my work as a {role}",
-        "headline": "Design engineer and builder",
-        "subline": "I'm Selene, a design engineer at FLY, where I craft intuitive user experiences. After hours, I build my own projects."
+        "headline": "Software Engineer, Designer and Amateur Filmmaker",
+        "subline": "Im Edis, im a student who works as a freelance dev. I make cool stuff"
     },
     "about": {
         "label": "About",
@@ -20,31 +20,35 @@
         "description": "Meet {name}, {role} from {location}",
         "intro": {
             "title": "Introduction",
-            "description": "Selene is a Jakarta-based design engineer with a passion for transforming complex challenges into simple, elegant design solutions. Her work spans digital interfaces, interactive experiences, and the convergence of design and technology."
+            "description": "Meet Edis, he is a student with a passion for transforming complex challenges into simple, elegant design solutions. His work spans digital interfaces, interactive experiences, and the convergence of design and technology."
         },
         "work": {
             "title": "Work Experience",
             "experiences": {
-                "FLY": {
-                    "timeframe": "2022 - Present",
-                    "role": "Senior Design Engineer",
-                    "achievements": "Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user engagement and 30% faster load times.;Spearheaded the integration of AI tools into design workflows, enabling designers to iterate 50% faster."
+                "Sparkasse": {
+                    "timeframe": "2024 - present",
+                    "role": "Banker",
+                    "achievements": "In charge of distributing cards and accounts to students, coordinating their incorporation in the bank and managing first impressions"
                 },
-                "Creativ3": {
-                    "timeframe": "2018 - 2022",
-                    "role": "Lead Designer",
-                    "achievements": "Developed a design system that unified the brand across multiple platforms, improving design consistency by 40%.;Led a cross-functional team to launch a new product line, contributing to a 15% increase in overall company revenue."
+                "UNHCR": {
+                    "timeframe": "2022 - 2023",
+                    "role": "IT Tech & Mentor",
+                    "achievements": "Refurbished donated pcs and mentored refugees."
                 }
+
             }
         },
         "studies": {
             "title": "Studies",
             "institutions": {
-                "University of Jakarta": {
+                "UACS": {
                     "description": "Studied software engineering."
                 },
-                "Build the Future": {
-                    "description": "Studied online marketing and personal branding."
+                "Harward CS50": {
+                    "description": "Actually learned software engineering."
+                },
+                "Odin Project": {
+                    "description": "Learned web development"
                 }
             }
         },

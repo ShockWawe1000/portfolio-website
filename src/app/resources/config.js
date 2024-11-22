@@ -31,7 +31,7 @@ const effects = {
     },
     dots: {
         display: true,
-        opacity: 0.4,           // 0 - 1
+        opacity: 0.5,           // 0 - 1
         size: '24'              // 2 | 4 | 8 | 12 | 16 | 20 | 24 | 32 | 40 | 48 | 56 | 634
     },
     lines: {
@@ -57,9 +57,9 @@ const display = {
 }
 
 const mailchimp = {
-    action: 'https://url/subscribe/post?parameters',
+    action: 'mailto:edis.usein@gmail.com',
     effects: {
-        mask: 'topRight',           // none | cursor | topLeft | topRight | bottomLeft | bottomRight
+        mask: 'cursor',           // none | cursor | topLeft | topRight | bottomLeft | bottomRight
         gradient: {
             display: true,
             opacity: 0.6            // 0 - 1
@@ -68,7 +68,7 @@ const mailchimp = {
             display: false,
         },
         lines: {
-            display: false,
+            display: true,
         },
     }
 }

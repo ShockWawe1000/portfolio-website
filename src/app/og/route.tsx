@@ -53,8 +53,8 @@ export async function GET(request: Request) {
                         }}>
                         <img src={'https://' + baseURL + person.avatar}
                             style={{
-                                width: '12rem',
-                                height: '12rem',
+                                width: '15rem',
+                                height: '15rem',
                                 objectFit: 'cover',
                                 borderRadius: '100%',
                             }}/>
