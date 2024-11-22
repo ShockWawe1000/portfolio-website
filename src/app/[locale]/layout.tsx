@@ -80,9 +80,9 @@ interface RootLayoutProps {
 	params: {locale: string};
 }
 
-export function generateStaticParams() {
-	return routing.locales.map((locale) => ({locale}));
-  }
+//export function generateStaticParams() {
+	//return routing.locales.map((locale) => ({locale}));
+  //}
 
 export default async function RootLayout({
 	children,

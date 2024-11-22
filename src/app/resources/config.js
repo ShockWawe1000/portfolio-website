@@ -27,7 +27,7 @@ const effects = {
     mask: 'cursor',             // none | cursor | topLeft | topRight | bottomLeft | bottomRight
     gradient: {
         display: true,
-        opacity: 0.4            // 0 - 1
+        opacity: 0.9           // 0 - 1
     },
     dots: {
         display: true,
@@ -35,7 +35,7 @@ const effects = {
         size: '24'              // 2 | 4 | 8 | 12 | 16 | 20 | 24 | 32 | 40 | 48 | 56 | 634
     },
     lines: {
-        display: false,
+        display: true,
     },
 }
 
@@ -62,7 +62,7 @@ const mailchimp = {
         mask: 'cursor',           // none | cursor | topLeft | topRight | bottomLeft | bottomRight
         gradient: {
             display: true,
-            opacity: 0.6            // 0 - 1
+            opacity: 0.2            // 0 - 1
         },
         dots: {
             display: false,
