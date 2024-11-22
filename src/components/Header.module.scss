@@ -23,3 +23,18 @@
         bottom: 0;
     }
 }
+
+.themeToggle {
+    background: var(--background-color);
+    color: var(--text-color);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+  
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  

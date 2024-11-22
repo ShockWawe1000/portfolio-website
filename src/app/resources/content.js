@@ -262,11 +262,7 @@ const gallery = {
     title: 'My photo gallery',
     description: `A photo collection by ${person.name}`,
     images: [
-        { 
-            src: '/images/projects/event-skopje/1.jpg', 
-            alt: 'image',
-            orientation: 'horizontal'
-        },
+       
         { 
             src: '/images/projects/event-skopje/2.jpg', 
             alt: 'image',
@@ -283,6 +279,11 @@ const gallery = {
             orientation: 'horizontal'
         },
         { 
+            src: '/images/projects/event-skopje/1.jpg', 
+            alt: 'image',
+            orientation: 'vertical'
+        },
+        { 
             src: '/images/projects/event-szeged/1.jpg', 
             alt: 'image',
             orientation: 'horizontal'
@@ -295,12 +296,12 @@ const gallery = {
         { 
             src: '/images/projects/event-szeged/3.jpg', 
             alt: 'image',
-            orientation: 'horizontal'
+            orientation: 'vertical'
         },
         { 
             src: '/images/projects/event-szeged/4.jpg', 
             alt: 'image',
-            orientation: 'horizontal'
+            orientation: 'vertical'
         },
         { 
             src: '/images/projects/event-szeged/5.jpg', 
@@ -310,7 +311,7 @@ const gallery = {
         { 
             src: '/images/projects/event-szeged/6.jpg', 
             alt: 'image',
-            orientation: 'vertical'
+            orientation: 'horizontal'
         },
         { 
             src: '/images/projects/event-szeged/7.jpg', 
