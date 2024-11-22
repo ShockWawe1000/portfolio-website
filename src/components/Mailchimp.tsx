@@ -99,15 +99,17 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
                                 textAlign: 'center',
                                 transition: 'all 0.3s ease', // Centered the button text
                             }}
-                            onMouseEnter={(e) => {
-                                e.target.style.boxShadow = '0 0 30px rgba(86, 236, 173, 0.8)';
-                                e.target.style.color = 'rgba(86, 236, 173, 0.8)';
+                            onMouseEnter={(e: React.MouseEvent<HTMLButtonElement>) => {
+                                const target = e.target as HTMLButtonElement;
+                                target.style.boxShadow = '0 0 30px rgba(86, 236, 173, 0.8)';
+                                target.style.color = 'rgba(86, 236, 173, 0.8)';
                              
                                  // Glow effect on hover
                             }}
-                            onMouseLeave={(e) => {
-                                e.target.style.boxShadow = '';
-                                 e.target.style.color = ''; // Remove glow when not hovered
+                            onMouseLeave={(e: React.MouseEvent<HTMLButtonElement>) => {
+                                const target = e.target as HTMLButtonElement;
+                                target.style.boxShadow = '';
+                                target.style.color = ''; // Remove glow when not hovered
                             }}>
                             Contact Me
                         </Button>
