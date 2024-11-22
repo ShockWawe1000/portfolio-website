@@ -250,6 +250,7 @@ export default function About(
                                             marginBottom="m">
                                             {experience.role}
                                         </Text>
+                                        {/* 
                                         <Flex
                                             as="ul"
                                             direction="column" gap="16">
@@ -261,7 +262,7 @@ export default function About(
                                                     {achievement}
                                                 </Text>
                                             ))}
-                                        </Flex>
+                                        </Flex> */}
                                         {experience.images.length > 0 && (
                                             <Flex
                                                 fillWidth paddingTop="m" paddingLeft="40"
